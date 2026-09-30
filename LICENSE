@@ -1,0 +1,157 @@
+Interition Plugin Licence
+
+Copyright (c) 2026 Interition Digital Transformation Ltd. All rights reserved.
+
+Version 1.0, 2026-09-30
+
+This licence (the "Licence") sets out what you may do with the Interition
+plugin for Claude Code (the "Plugin"), published by Interition Digital
+Transformation Ltd ("Interition", "we", "us"). If you do not accept it, do
+not download, install or use the Plugin.
+
+
+1. DEFINITIONS
+
+1.1  "Plugin" means the software in this repository and in any release of it
+     that Interition publishes, including the plugin manifest, the skills
+     and their instructions, the scripts and compiled programs, the hooks,
+     the documentation and all other files, except Third-Party Components.
+
+1.2  "Interition Services" means the Solid servers that Interition operates,
+     or that are operated for you by Interition or under a written licence
+     from Interition, including crawlout.io, together with the accounts,
+     Pods, WebIDs and credentials issued on them.
+
+1.3  "Service Terms" means any terms Interition publishes for accounts on
+     the Interition Services, as updated from time to time.
+
+1.4  "Third-Party Components" means software written by others that is
+     included in the Plugin and listed in the file THIRD-PARTY-NOTICES.
+
+1.5  "You" means the person or organisation using the Plugin. If you accept
+     this Licence for an organisation, you confirm you are authorised to
+     bind it, and "you" means that organisation.
+
+
+2. WHAT YOU MAY DO
+
+2.1  While you comply with this Licence and the Service Terms, Interition
+     grants you a worldwide, royalty-free, non-exclusive, non-transferable,
+     non-sublicensable, revocable licence to:
+
+     (a)  download and install the Plugin, unmodified, from a source that
+          Interition publishes, on computers you own or control;
+
+     (b)  run the Plugin in Claude Code, or another application that can
+          load it, for the sole purpose of using the Interition Services; and
+
+     (c)  make the copies that installing, running, caching and backing up
+          the Plugin reasonably require.
+
+2.2  No other rights are granted, whether by implication or otherwise.
+
+
+3. WHAT YOU MAY NOT DO
+
+     You may not, and may not help anyone else to:
+
+     (a)  use the Plugin with any server or service other than the
+          Interition Services;
+
+     (b)  modify, adapt, translate or create derivative works of the Plugin,
+          or combine it with other software so that it runs in a changed
+          form;
+
+     (c)  copy, publish, distribute, sell, rent, lend or sublicense the
+          Plugin, except by pointing others to a source Interition publishes;
+
+     (d)  use the Plugin, or any part of it, to build or train a product or
+          service that does the same job or competes with the Plugin or the
+          Interition Services;
+
+     (e)  remove or change any copyright, licence or other notice in the
+          Plugin; or
+
+     (f)  get around any limit on the Interition Services, or use the Plugin
+          in breach of the Service Terms or the law.
+
+     Being able to read the Plugin's files does not give you any right to
+     use them beyond what section 2 allows.
+
+
+4. THIRD-PARTY COMPONENTS
+
+     Third-Party Components are licensed to you under their own licences,
+     which are listed in THIRD-PARTY-NOTICES. Nothing in this Licence limits
+     the rights those licences give you in those components.
+
+
+5. THE SERVICE
+
+     This Licence covers the Plugin only. Your account and your use of the
+     Interition Services are also subject to the Service Terms; where the
+     two conflict, the Service Terms prevail. The data on your Pod is yours.
+
+
+6. UPDATES
+
+     Interition may publish new versions of the Plugin. This Licence, or the
+     version of it that comes with a new release, applies to that release.
+     Interition may stop publishing or supporting the Plugin at any time.
+
+
+7. ENDING THIS LICENCE
+
+7.1  This Licence ends automatically if you break it, or if your access to
+     the Interition Services ends. Interition may also end it by notice.
+
+7.2  When it ends you must stop using the Plugin and delete your copies. It
+     does not affect your data on your Pod.
+
+7.3  Sections 3, 4, 8, 9 and 10 continue after this Licence ends.
+
+
+8. ALPHA SOFTWARE; NO WARRANTY
+
+     The Plugin is alpha software. It is incomplete, may change or stop
+     working without notice, and should not be relied on for anything
+     critical. Keep your own copies of anything that matters to you.
+
+     The Plugin is provided "as is", without warranty of any kind, whether
+     express or implied, including warranties of satisfactory quality,
+     fitness for a particular purpose and non-infringement, to the fullest
+     extent the law allows. Interition does not promise that the Plugin will
+     be free of errors or run without interruption.
+
+
+9. LIMITATION OF LIABILITY
+
+9.1  To the fullest extent the law allows, Interition is not liable to you
+     for any indirect or consequential loss, or for any loss of profit,
+     revenue, data or goodwill, arising from the Plugin or this Licence.
+
+9.2  To the fullest extent the law allows, Interition's total liability
+     arising from the Plugin or this Licence is limited to the fees you paid
+     Interition for the Interition Services in the twelve months before the
+     event giving rise to the claim, less Interition's costs of providing
+     those services to you in that period. If you paid nothing, or the costs
+     equal or exceed what you paid, that limit is zero.
+
+9.3  Nothing in this Licence limits liability for death or personal injury
+     caused by negligence, for fraud, or for anything else that cannot be
+     limited by law.
+
+
+10. GENERAL
+
+10.1 This Licence is governed by the law of England and Wales, and the
+     courts of England and Wales have exclusive jurisdiction over any
+     dispute arising from it.
+
+10.2 If any part of this Licence is found unenforceable, the rest remains
+     in effect.
+
+10.3 Interition not enforcing a term straight away does not mean it gives
+     up the right to enforce it later.
+
+10.4 Questions about this Licence: https://interition.ai
