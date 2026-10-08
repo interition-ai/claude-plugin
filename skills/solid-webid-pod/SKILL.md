@@ -25,10 +25,42 @@ Before any command runs, two pieces of environment must be in place. The agent s
 
 | Variable | Purpose | How to set |
 |----------|---------|-----------|
-| `INTERITION_PASSPHRASE` | Encrypts local credentials at rest | Export in shell profile or set in Claude Code settings.json `env` |
-| `SOLID_SERVER_URL` | Which CSS this agent talks to | Same; default `https://crawlout.io` if unset |
+| `INTERITION_PASSPHRASE` | Encrypts local credentials at rest | Keep it in the system keychain; the shell profile reads it from there (below). Never write the passphrase itself into a file |
+| `SOLID_SERVER_URL` | Which CSS this agent talks to | Export in the shell profile; default `https://crawlout.io` if unset |
 
 Encrypted credentials live at `~/.interition/agents/<agent-name>/<server-key>/credentials.enc`. The passphrase never leaves the device; the server never sees it.
+
+### Storing the passphrase
+
+The passphrase is the key to the stored credentials, so it belongs in the operating system's secret store, not in a shell profile, `.env` file or `settings.json`. Store it once, then have the shell profile read it at startup.
+
+**macOS (Keychain).** Store it (you are prompted for the value, so it never appears in shell history):
+
+```bash
+security add-generic-password -a "$USER" -s interition-credential-store -w
+```
+
+Then add to `~/.zshrc` (or `~/.bash_profile`):
+
+```bash
+export INTERITION_PASSPHRASE="$(security find-generic-password -a "$USER" -s interition-credential-store -w)"
+```
+
+**Linux (Secret Service, e.g. GNOME Keyring or KWallet, via `secret-tool` from libsecret).** Store it (prompted):
+
+```bash
+secret-tool store --label="Interition credential store" service interition-credential-store account "$USER"
+```
+
+Then add to `~/.bashrc` (or `~/.zshrc`):
+
+```bash
+export INTERITION_PASSPHRASE="$(secret-tool lookup service interition-credential-store account "$USER")"
+```
+
+**Other platforms.** Use the platform's own secret store in the same way: store the passphrase there once and have the shell read it into `INTERITION_PASSPHRASE` at startup.
+
+Restart Claude Code after changing the profile so it inherits the variable.
 
 ## Operations
 
@@ -168,7 +200,7 @@ The container layout is opinionated for agent use. The agent can create addition
 | `No credentials found for agent X on server Y. Run provision first.` | First-run, or server-keyed creds missing | Run `provision.sh --name X` (and confirm `SOLID_SERVER_URL` is set to Y) |
 | `401 Unauthorized` | Token expired, or token from wrong server | Get a fresh token; verify `SOLID_SERVER_URL` matches the resource |
 | `403 Forbidden` | Authenticated, but ACL denies access | Resource owner needs to grant access to this agent's WebID |
-| `INTERITION_PASSPHRASE not set` | Env var missing | Export it before invoking any command |
+| `INTERITION_PASSPHRASE not set` | Env var missing | Set it up as in *Storing the passphrase*, then restart Claude Code |
 
 ## Security caveats
 

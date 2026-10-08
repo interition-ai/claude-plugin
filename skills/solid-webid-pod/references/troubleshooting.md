@@ -6,10 +6,16 @@
 
 **Cause:** The `INTERITION_PASSPHRASE` environment variable is not set.
 
-**Fix:**
+**Fix:** Keep the passphrase in the system keychain and have your shell profile read it at startup; do not write the passphrase itself into a profile or settings file. On macOS:
+
 ```bash
-export INTERITION_PASSPHRASE="your-passphrase-here"
+# once: store it (you are prompted for the value)
+security add-generic-password -a "$USER" -s interition-credential-store -w
+# in ~/.zshrc:
+export INTERITION_PASSPHRASE="$(security find-generic-password -a "$USER" -s interition-credential-store -w)"
 ```
+
+For Linux and other platforms, see *Storing the passphrase* in `SKILL.md`. Restart Claude Code afterwards so it picks up the variable.
 
 ### "No credentials found for agent X"
 
