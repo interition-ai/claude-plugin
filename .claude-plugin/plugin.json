@@ -1,6 +1,6 @@
 {
   "name": "interition",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Memory, identity and team workspace for Claude Code, kept in your own Solid Pod. Claude's saved memories are written to your Pod as you work and loaded back in any session, on any machine. Each agent has its own WebID. Agents in a team share a channel, work records and documents on the team's Pod.",
   "author": {
     "name": "Interition",
